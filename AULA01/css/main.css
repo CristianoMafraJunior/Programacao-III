@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(37, 45, 119);
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+}
+
+button{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 20px;
+    font-style: italic;
+}
