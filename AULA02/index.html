@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistência de dados com JavaScript</title>
+    <script src="js/sorteio.js"></script>
+</head>
+<body>
+    <h1>Sorteio de nomes</h1>
+
+    <form>
+        <label>Informe um nome:</label>
+        <input type="text" id="nome" name="nome" maxlength="60">
+        <button type="button" id="btnInserir" name="btnInserir" onclick="s.inserir()">Inserir Nome</button>
+    </form>
+
+    <h2>Lista de nomes: </h2>
+
+    <ul id="ListaDeNomes">
+       
+    </ul>
+
+    <button type="button" onclick="s.apagarLista()" id="btnApagarLista" name="btnApagarLista">Apagar Lista</button>
+    <button type="button" id="btnSortear" name="btnSortear" onclick="s.sortear()">Sortear</button>
+    
+
+    <h3>Ganhador: <span id="ganhador"></span></h3>
+
+</body>
+</html>
