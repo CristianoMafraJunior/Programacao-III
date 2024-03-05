@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Despesas</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Calculadora de Despesas</h1>
+
+    <form id="formDespesas">
+        <div>
+            <label for="nome">Informe um nome: </label>
+            <input type="text" id="nome" name="nome" maxlength="60">
+        </div>
+        <div>
+            <label for="valor">Informe um valor: </label>
+            <input type="number" id="valor" name="valor" maxlength="30">
+        </div>
+        <div>
+            <label for="quantidade">Informe uma quantidade: </label>
+            <input type="number" id="quantidade" name="quantidade" maxlength="10">
+        </div>
+        <div>
+            <label for="descricao">Informe uma descrição: </label>
+            <input type="text" id="descricao" name="descricao" maxlength="100">
+        </div>
+        <div>
+            <label for="data">Informe uma data da despesa: </label>
+            <input type="date" id="data" name="data">
+        </div>
+        <button type="button" id="btnAdicionarDespesa">Adicionar Despesa</button>
+    </form>
+    
+    <h2>Informações das Despesas</h2>
+    <div id="informacoesDespesas">
+        <div>
+            <label>Despesas Total: <span id="despesa_total"></span></label>
+        </div>
+        <div>
+            <label>Média das Despesas: <span id="media_total"></span></label>
+        </div>
+        <div>
+            <label>Despesa mais Alta: <span id="despesa_alta"></span></label>
+        </div>
+        <button type="button" id="btnApagarDespesas">Apagar Despesas</button>
+    </div>
+
+    <h2>Lista de Despesas: </h2>
+    <ul id="lista_despesas"></ul>
+
+    <script src="js/calculadora_despesa.js"></script>
+</body>
+</html>
