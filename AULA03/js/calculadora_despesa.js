@@ -1,13 +1,14 @@
 class CalculaDespesa {
+
     constructor() {
+        this.recuperarDespesasSalvas();
+        this.configurarEventos();
         const despesasSalvas = localStorage.getItem('despesas');
         if (despesasSalvas) {
             this.despesas = JSON.parse(despesasSalvas);
         } else {
             this.despesas = [];
         }
-    
-        this.configurarEventos();
     }
 
     configurarEventos() {
@@ -32,7 +33,7 @@ class CalculaDespesa {
             valor: valor,
             quantidade: quantidade,
             descricao: descricao,
-            data: data
+            data: new Date(data).toLocaleDateString('pt-BR')
         };
 
         
@@ -41,7 +42,6 @@ class CalculaDespesa {
         this.calcularTotal();
         this.calcularMedia();
         this.encontrarDespesaMaisAlta();
-        this.exibirDespesas();
     }
 
     calcularTotal() {
@@ -93,6 +93,7 @@ class CalculaDespesa {
         } else {
             this.despesas = [];
         }
+        this.exibirDespesas();
     }
 
     apagarDespesas() {
@@ -104,7 +105,4 @@ class CalculaDespesa {
         document.getElementById("lista_despesas").innerHTML = '';
     }
 }
-window.onload = () => {
-    const calculadoraDespesa = new CalculaDespesa();
-    calculadoraDespesa.recuperarDespesasSalvas();
-};
+var calculadoraDespesa = new CalculaDespesa();
